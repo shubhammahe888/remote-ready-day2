@@ -37,7 +37,7 @@
 
         .logo-header {
             background: white;
-            padding: 20px 0;
+            padding: 25px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
@@ -54,7 +54,7 @@
         }
 
         .logo-container img {
-            height: 60px;
+            height: 70px;
             width: auto;
         }
 
@@ -318,10 +318,11 @@
         }
 
         footer {
-            background: var(--dark);
-            color: white;
+            background: white;
+            color: var(--dark);
             padding: 50px 20px 30px;
             text-align: center;
+            border-top: 1px solid #e2e8f0;
         }
 
         .footer-logo {
@@ -329,26 +330,18 @@
         }
 
         .footer-logo img {
-            height: 50px;
+            height: 60px;
             width: auto;
-            filter: brightness(0) invert(1);
-            opacity: 0.9;
-        }
-
-        .footer-brand {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 5px;
         }
 
         .footer-creator {
             font-size: 16px;
-            opacity: 0.7;
+            color: var(--gray);
             margin-bottom: 20px;
         }
 
         footer p {
-            opacity: 0.8;
+            color: var(--gray);
             margin-bottom: 10px;
         }
 
@@ -360,19 +353,19 @@
         }
 
         .social-links a {
-            color: white;
+            color: var(--primary);
             text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
+            transition: color 0.3s ease;
+            font-weight: 500;
         }
 
         .social-links a:hover {
-            opacity: 1;
+            color: var(--secondary);
         }
 
         @media (max-width: 768px) {
             .logo-container img {
-                height: 45px;
+                height: 50px;
             }
 
             h1 {
@@ -397,6 +390,10 @@
 
             .resources-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .footer-logo img {
+                height: 45px;
             }
         }
 
@@ -426,7 +423,7 @@
 <body>
     <header class="logo-header">
         <div class="logo-container">
-            <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/c3008f5f-aba3-45e1-b435-c5f0bc3350d5/2026-01-12T04-34-34-202Z-c27c3b01-chat-image-1768192474183-0.jpg" alt="ChillApply Logo">
+            <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/c3008f5f-aba3-45e1-b435-c5f0bc3350d5/2026-01-12T04-38-20-827Z-1f5fb03d-chat-image-1768192700809-0.jpg" alt="ChillApply Logo">
         </div>
     </header>
 
@@ -585,14 +582,13 @@
     <footer>
         <div class="container">
             <div class="footer-logo">
-                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/c3008f5f-aba3-45e1-b435-c5f0bc3350d5/2026-01-12T04-34-34-202Z-c27c3b01-chat-image-1768192474183-0.jpg" alt="ChillApply Logo">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/c3008f5f-aba3-45e1-b435-c5f0bc3350d5/2026-01-12T04-38-20-827Z-1f5fb03d-chat-image-1768192700809-0.jpg" alt="ChillApply Logo">
             </div>
-            <div class="footer-brand">ChillApply</div>
             <div class="footer-creator">by Shubham Maheshwari</div>
             <p>Remote Ready in 7 Days - Day 2: LinkedIn Profile Makeover</p>
             <p style="margin-top: 20px; font-size: 14px;">All resources are free and based on analysis of 10,000+ remote job applications.</p>
             <div class="social-links">
-                <a href="https://instagram.com/chillapply" target="_blank">Instagram</a>
+                <a href="https://instagram.com/chillapply" target="_blank">Follow on Instagram</a>
             </div>
         </div>
     </footer>
