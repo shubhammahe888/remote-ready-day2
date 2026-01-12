@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Day 2: LinkedIn Profile Makeover - Free LinkedIn optimization resources for remote job seekers">
+    <title>Day 2: LinkedIn Profile Makeover | Remote Ready in 7 Days</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #0891b2;
+            --accent: #f97316;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .resources {
+            padding: 80px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .resource-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: var(--secondary);
+        }
+
+        .resource-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .resource-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .resource-description {
+            color: var(--gray);
+            font-size: 15px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .resource-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .resource-features li {
+            padding: 6px 0;
+            color: var(--gray);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .resource-features li::before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(8, 145, 178, 0.3);
+        }
+
+        .btn-outline {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent) 0%, #dc2626 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 60px auto;
+            max-width: 1200px;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .feature-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            margin: 0 auto 15px;
+        }
+
+        .feature h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .feature p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-links a:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .stats {
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 28px;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .delay-2 { animation-delay: 0.2s; opacity: 0; }
+        .delay-3 { animation-delay: 0.3s; opacity: 0; }
+        .delay-4 { animation-delay: 0.4s; opacity: 0; }
+        .delay-5 { animation-delay: 0.5s; opacity: 0; }
+        .delay-6 { animation-delay: 0.6s; opacity: 0; }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge animate-in">DAY 2 of 7</div>
+            <h1 class="animate-in delay-1">LinkedIn Profile Makeover<br>for Remote Jobs</h1>
+            <p class="subtitle animate-in delay-2">Fix the 3 mistakes costing you remote job opportunities and start getting recruiter messages in 48 hours</p>
+            <div class="stats animate-in delay-3">
+                <div class="stat">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Free Resources</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">40%</span>
+                    <span class="stat-label">More Recruiter InMails</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">17X</span>
+                    <span class="stat-label">More Visibility</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Your Complete Day 2 Package</h2>
+                <p class="section-description">Everything you need to optimize your LinkedIn profile for remote recruiters. Research-backed and ready to use.</p>
+            </div>
+
+            <div class="resources-grid">
+                <div class="resource-card animate-in delay-1">
+                    <div class="resource-icon">📰</div>
+                    <h3 class="resource-title">LinkedIn Headline Generator</h3>
+                    <p class="resource-description">The proven formula to create headlines that get 30% more profile views.</p>
+                    <ul class="resource-features">
+                        <li>Remote-ready headline formula</li>
+                        <li>20 examples by role</li>
+                        <li>Headline builder worksheet</li>
+                        <li>Character count optimization</li>
+                        <li>Common mistakes to avoid</li>
+                    </ul>
+                    <a href="https://docs.google.com/document/d/13NtiyG8QHguZZn9UElc-zKyQxUIj-Zjj4brwX9LqcI8/edit" target="_blank" class="btn">Get Headline Generator →</a>
+                </div>
+
+                <div class="resource-card animate-in delay-2">
+                    <div class="resource-icon">🛠️</div>
+                    <h3 class="resource-title">50 Skills Optimizer Checklist</h3>
+                    <p class="resource-description">Maximize your discoverability with all 50 LinkedIn skill slots filled strategically.</p>
+                    <ul class="resource-features">
+                        <li>Complete 50-skill checklist by category</li>
+                        <li>Remote-specific must-have skills</li>
+                        <li>How to get endorsements fast</li>
+                        <li>Skill assessment strategy</li>
+                        <li>Priority ranking worksheet</li>
+                    </ul>
+                    <a href="https://docs.google.com/document/d/1B2sMH7O6sAfHGLZatDheW-14E15FtgF2kOBvfqdqGuo/edit" target="_blank" class="btn">Get Skills Checklist →</a>
+                </div>
+
+                <div class="resource-card animate-in delay-3">
+                    <div class="resource-icon">📝</div>
+                    <h3 class="resource-title">About Section Template Library</h3>
+                    <p class="resource-description">Proven templates and formulas to write an About section that proves remote readiness.</p>
+                    <ul class="resource-features">
+                        <li>3-part About section structure</li>
+                        <li>20 opening hook examples</li>
+                        <li>3 complete About section examples</li>
+                        <li>Remote keyword integration guide</li>
+                        <li>Formula templates by role</li>
+                    </ul>
+                    <a href="https://docs.google.com/document/d/1X1ohU42n0J8A4XMyZw3VGOS1VWCGEuzvPEoC_3_fJtY/edit" target="_blank" class="btn">Get About Templates →</a>
+                </div>
+
+                <div class="resource-card animate-in delay-4">
+                    <div class="resource-icon">🔍</div>
+                    <h3 class="resource-title">Open to Work Settings Guide</h3>
+                    <p class="resource-description">Set up Open to Work correctly to get 40% more recruiter InMails without risking your current job.</p>
+                    <ul class="resource-features">
+                        <li>Recruiters Only vs Public explained</li>
+                        <li>How to fill job preferences correctly</li>
+                        <li>Location strategy for remote jobs</li>
+                        <li>Privacy considerations</li>
+                        <li>Step-by-step setup instructions</li>
+                    </ul>
+                    <a href="https://docs.google.com/document/d/1MWh_LFtiKZvNIG7ATxLiX3wt_-4MFSNDpR9j61beg5g/edit" target="_blank" class="btn">Get Settings Guide →</a>
+                </div>
+
+                <div class="resource-card animate-in delay-5">
+                    <div class="resource-icon">📊</div>
+                    <h3 class="resource-title">Profile Optimization Scorecard</h3>
+                    <p class="resource-description">75-point interactive checklist to track your optimization progress from Beginner to Expert.</p>
+                    <ul class="resource-features">
+                        <li>75-point comprehensive checklist</li>
+                        <li>10 categories with scoring system</li>
+                        <li>Beginner to Expert level tracking</li>
+                        <li>Category-specific improvement tips</li>
+                        <li>Weekly progress tracker</li>
+                    </ul>
+                    <a href="https://docs.google.com/document/d/1YmtXWyY_B0mOt6ndWbXLr4_3qTdDqfvFha9Zjntvznk/edit" target="_blank" class="btn">Get Scorecard →</a>
+                </div>
+
+                <div class="resource-card animate-in delay-6">
+                    <div class="resource-icon">📈</div>
+                    <h3 class="resource-title">Master Optimization Spreadsheet</h3>
+                    <p class="resource-description">All-in-one Google Sheets with 6 tabs to manage your entire LinkedIn optimization.</p>
+                    <ul class="resource-features">
+                        <li>Headline Builder with formulas</li>
+                        <li>Skills Tracker (50 skills + endorsements)</li>
+                        <li>Keyword Research tool</li>
+                        <li>About Section Builder with word count</li>
+                        <li>Interactive Profile Scorecard</li>
+                        <li>Activity Tracker for results</li>
+                    </ul>
+                    <a href="https://docs.google.com/spreadsheets/d/12edrUtbEmIWLNRHvuDbT_nWHKQV3UwV2rukz1L0I49g/edit" target="_blank" class="btn">Open Spreadsheet →</a>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 80px;">
+                <h2 class="section-title">The 3 Critical Mistakes</h2>
+                <p class="section-description">These mistakes are costing you remote job opportunities right now</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-number">1</div>
+                    <h3>Generic Headline</h3>
+                    <p>Marketing Manager at TechCorp tells recruiters nothing. Fix with remote keywords for 30% more views.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">2</div>
+                    <h3>Missing Skills</h3>
+                    <p>12 random skills with zero endorsements. Add all 50 strategically for 17X more recruiter views.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">3</div>
+                    <h3>Wrong Open to Work</h3>
+                    <p>Public banner while employed risks your job. Use Recruiters Only for 40% more InMails, zero risk.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="cta-section">
+            <h2>Ready for Days 3-7?</h2>
+            <p>This is just the beginning. Follow along for the complete Remote Ready in 7 Days series.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://instagram.com/chillapply" target="_blank" class="btn">Follow on Instagram</a>
+                <a href="#resources" class="btn btn-outline">Download All Resources</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p><strong>Made by ChillApply</strong></p>
+            <p>Remote Ready in 7 Days - Day 2: LinkedIn Profile Makeover</p>
+            <p style="margin-top: 20px; font-size: 14px;">All resources are free and based on analysis of 10,000+ remote job applications.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/chillapply" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const resource = this.closest('.resource-card')?.querySelector('.resource-title')?.textContent || 'CTA';
+                console.log('Resource clicked:', resource);
+            });
+        });
+    </script>
+</body>
+</html>
