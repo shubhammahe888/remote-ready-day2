@@ -35,29 +35,6 @@
             padding: 0 20px;
         }
 
-        .logo-header {
-            background: white;
-            padding: 25px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo-container img {
-            height: 70px;
-            width: auto;
-        }
-
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
@@ -318,30 +295,26 @@
         }
 
         footer {
-            background: white;
-            color: var(--dark);
-            padding: 50px 20px 30px;
+            background: var(--dark);
+            color: white;
+            padding: 40px 20px;
             text-align: center;
-            border-top: 1px solid #e2e8f0;
         }
 
-        .footer-logo {
-            margin-bottom: 20px;
-        }
-
-        .footer-logo img {
-            height: 60px;
-            width: auto;
+        .footer-brand {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
         }
 
         .footer-creator {
             font-size: 16px;
-            color: var(--gray);
+            opacity: 0.7;
             margin-bottom: 20px;
         }
 
         footer p {
-            color: var(--gray);
+            opacity: 0.8;
             margin-bottom: 10px;
         }
 
@@ -353,21 +326,17 @@
         }
 
         .social-links a {
-            color: var(--primary);
+            color: white;
             text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 500;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
         }
 
         .social-links a:hover {
-            color: var(--secondary);
+            opacity: 1;
         }
 
         @media (max-width: 768px) {
-            .logo-container img {
-                height: 50px;
-            }
-
             h1 {
                 font-size: 32px;
             }
@@ -390,10 +359,6 @@
 
             .resources-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .footer-logo img {
-                height: 45px;
             }
         }
 
@@ -421,12 +386,6 @@
     </style>
 </head>
 <body>
-    <header class="logo-header">
-        <div class="logo-container">
-            <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/c3008f5f-aba3-45e1-b435-c5f0bc3350d5/2026-01-12T04-38-20-827Z-1f5fb03d-chat-image-1768192700809-0.jpg" alt="ChillApply Logo">
-        </div>
-    </header>
-
     <section class="hero">
         <div class="hero-content">
             <div class="badge animate-in">DAY 2 of 7</div>
@@ -581,14 +540,12 @@
 
     <footer>
         <div class="container">
-            <div class="footer-logo">
-                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/c3008f5f-aba3-45e1-b435-c5f0bc3350d5/2026-01-12T04-38-20-827Z-1f5fb03d-chat-image-1768192700809-0.jpg" alt="ChillApply Logo">
-            </div>
+            <div class="footer-brand">ChillApply</div>
             <div class="footer-creator">by Shubham Maheshwari</div>
             <p>Remote Ready in 7 Days - Day 2: LinkedIn Profile Makeover</p>
             <p style="margin-top: 20px; font-size: 14px;">All resources are free and based on analysis of 10,000+ remote job applications.</p>
             <div class="social-links">
-                <a href="https://instagram.com/chillapply" target="_blank">Follow on Instagram</a>
+                <a href="https://instagram.com/chillapply" target="_blank">Instagram</a>
             </div>
         </div>
     </footer>
